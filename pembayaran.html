@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Pembayaran SPP - Sistem Informasi Inventory Sekolah</title>
+    <link rel="stylesheet" href="css/dashboard-styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>📚 Inventory</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="dashboard-main.html" class="nav-item">
+                    <span class="icon">📊</span>
+                    <span>Dashboard</span>
+                </a>
+                <a href="kelas.html" class="nav-item">
+                    <span class="icon">🏫</span>
+                    <span>Kelas</span>
+                </a>
+                <a href="siswa.html" class="nav-item">
+                    <span class="icon">👥</span>
+                    <span>Siswa</span>
+                </a>
+                <a href="pembayaran.html" class="nav-item active">
+                    <span class="icon">💰</span>
+                    <span>Pembayaran</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="index.html" class="logout-btn">🚪 Logout</a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="dashboard-header">
+                <h1>Data Pembayaran SPP</h1>
+                <p class="current-date" id="currentDate"></p>
+            </header>
+
+            <!-- Pembayaran Menu -->
+            <div class="menu-section active">
+                <div class="section-title">
+                    <h2>💰 Data Pembayaran SPP Siswa</h2>
+                </div>
+                <div class="pembayaran-content">
+                    <div class="filter-section">
+                        <label for="kelasFilterPembayaran">Pilih Kelas:</label>
+                        <select id="kelasFilterPembayaran">
+                            <option value="">-- Pilih Kelas --</option>
+                        </select>
+                    </div>
+                    <div id="pembayaranTable" class="table-container">
+                        <p>Pilih kelas terlebih dahulu untuk melihat data pembayaran</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/pembayaran.js"></script>
+</body>
+</html>
